@@ -41,6 +41,7 @@ Partial Class LoginForm1
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtUser = New MetroFramework.Controls.MetroTextBox()
         Me.txtPass = New MetroFramework.Controls.MetroTextBox()
+        Me.MetroButton1 = New MetroFramework.Controls.MetroButton()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -136,7 +137,7 @@ Partial Class LoginForm1
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(278, 257)
+        Me.Label5.Location = New System.Drawing.Point(357, 259)
         Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(82, 31)
@@ -148,7 +149,7 @@ Partial Class LoginForm1
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Segoe UI", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Red
-        Me.Label6.Location = New System.Drawing.Point(121, 288)
+        Me.Label6.Location = New System.Drawing.Point(200, 290)
         Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(223, 65)
@@ -160,7 +161,7 @@ Partial Class LoginForm1
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(245, 176)
+        Me.Label4.Location = New System.Drawing.Point(324, 178)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(164, 31)
@@ -172,7 +173,7 @@ Partial Class LoginForm1
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Franklin Gothic Medium", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(85, 95)
+        Me.Label3.Location = New System.Drawing.Point(164, 97)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(335, 81)
@@ -184,15 +185,16 @@ Partial Class LoginForm1
         Me.Panel1.BackColor = System.Drawing.Color.Transparent
         Me.Panel1.BackgroundImage = CType(resources.GetObject("Panel1.BackgroundImage"), System.Drawing.Image)
         Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel1.Controls.Add(Me.MetroButton1)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.Label6)
         Me.Panel1.Controls.Add(Me.Label5)
-        Me.Panel1.Location = New System.Drawing.Point(252, 1)
+        Me.Panel1.Location = New System.Drawing.Point(252, -4)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(616, 502)
+        Me.Panel1.Size = New System.Drawing.Size(616, 507)
         Me.Panel1.TabIndex = 11
         '
         'Label1
@@ -200,7 +202,7 @@ Partial Class LoginForm1
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.LimeGreen
-        Me.Label1.Location = New System.Drawing.Point(167, 207)
+        Me.Label1.Location = New System.Drawing.Point(246, 209)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(144, 50)
@@ -221,11 +223,21 @@ Partial Class LoginForm1
         Me.txtPass.Size = New System.Drawing.Size(165, 23)
         Me.txtPass.TabIndex = 21
         '
+        'MetroButton1
+        '
+        Me.MetroButton1.Location = New System.Drawing.Point(383, 484)
+        Me.MetroButton1.Name = "MetroButton1"
+        Me.MetroButton1.Size = New System.Drawing.Size(116, 23)
+        Me.MetroButton1.TabIndex = 5
+        Me.MetroButton1.Text = "Salir del sistema"
+        '
         'LoginForm1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(672, 503)
+        Me.BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle
+        Me.ClientSize = New System.Drawing.Size(749, 503)
+        Me.ControlBox = False
         Me.Controls.Add(Me.txtPass)
         Me.Controls.Add(Me.txtUser)
         Me.Controls.Add(Me.MetroLink2)
@@ -245,10 +257,12 @@ Partial Class LoginForm1
         Me.MinimizeBox = False
         Me.Name = "LoginForm1"
         Me.Padding = New System.Windows.Forms.Padding(23, 74, 23, 25)
-        Me.ShadowType = MetroFramework.Forms.MetroForm.MetroFormShadowType.None
+        Me.Resizable = False
+        Me.ShadowType = MetroFramework.Forms.MetroForm.MetroFormShadowType.SystemShadow
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
-        Me.Style = MetroFramework.MetroColorStyle.Lime
+        Me.Style = MetroFramework.MetroColorStyle.Yellow
         Me.Text = "Inicia sesion"
+        Me.Theme = MetroFramework.MetroThemeStyle.Light
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
@@ -274,4 +288,5 @@ Partial Class LoginForm1
     Friend WithEvents txtUser As MetroFramework.Controls.MetroTextBox
     Friend WithEvents txtPass As MetroFramework.Controls.MetroTextBox
     Friend WithEvents Label1 As Label
+    Friend WithEvents MetroButton1 As MetroFramework.Controls.MetroButton
 End Class
