@@ -105,10 +105,10 @@
     <Compile Include="Form3.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormTicket.Designer.vb">
-      <DependentUpon>FormTicket.vb</DependentUpon>
+    <Compile Include="FormVerTicket.Designer.vb">
+      <DependentUpon>FormVerTicket.vb</DependentUpon>
     </Compile>
-    <Compile Include="FormTicket.vb">
+    <Compile Include="FormVerTicket.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LoginForm1.Designer.vb">
@@ -128,6 +128,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Producto.vb" />
     <Compile Include="SesionActual.vb" />
     <Compile Include="SplashScreen1.Designer.vb">
       <DependentUpon>SplashScreen1.vb</DependentUpon>
@@ -146,8 +147,8 @@
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormTicket.resx">
-      <DependentUpon>FormTicket.vb</DependentUpon>
+    <EmbeddedResource Include="FormVerTicket.resx">
+      <DependentUpon>FormVerTicket.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm1.resx">
       <DependentUpon>LoginForm1.vb</DependentUpon>

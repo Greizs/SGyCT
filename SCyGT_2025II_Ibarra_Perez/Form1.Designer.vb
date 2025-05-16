@@ -31,27 +31,29 @@ Partial Class Form1
         Me.MetroTextBox1 = New MetroFramework.Controls.MetroTextBox()
         Me.MetroTextBox2 = New MetroFramework.Controls.MetroTextBox()
         Me.MetroLabel3 = New MetroFramework.Controls.MetroLabel()
-        Me.dgvProductos = New System.Windows.Forms.DataGridView()
+        Me.dgvCarrito = New System.Windows.Forms.DataGridView()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.MetroButton1 = New MetroFramework.Controls.MetroButton()
-        Me.MetroButton2 = New MetroFramework.Controls.MetroButton()
-        Me.MetroButton4 = New MetroFramework.Controls.MetroButton()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.MetroLabel4 = New MetroFramework.Controls.MetroLabel()
-        Me.MetroLabel5 = New MetroFramework.Controls.MetroLabel()
-        Me.MetroLabel6 = New MetroFramework.Controls.MetroLabel()
-        Me.MetroButton3 = New MetroFramework.Controls.MetroButton()
+        Me.btnAgregarProducto = New MetroFramework.Controls.MetroButton()
+        Me.dgvProductos = New System.Windows.Forms.DataGridView()
+        Me.btnCombos = New MetroFramework.Controls.MetroButton()
+        Me.btnBebidas = New MetroFramework.Controls.MetroButton()
         Me.MetroButton5 = New MetroFramework.Controls.MetroButton()
-        Me.MetroButton6 = New MetroFramework.Controls.MetroButton()
-        Me.MetroButton7 = New MetroFramework.Controls.MetroButton()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.MetroButton8 = New MetroFramework.Controls.MetroButton()
+        Me.btnPizzas = New MetroFramework.Controls.MetroButton()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.lblTotalneto = New MetroFramework.Controls.MetroLabel()
+        Me.lblSubtotal = New MetroFramework.Controls.MetroLabel()
+        Me.MetroLabel6 = New MetroFramework.Controls.MetroLabel()
+        Me.MetroLabel4 = New MetroFramework.Controls.MetroLabel()
+        Me.MetroButton1 = New MetroFramework.Controls.MetroButton()
+        Me.btnConfirmarVenta = New MetroFramework.Controls.MetroButton()
+        Me.btnLimpiarCarrito = New MetroFramework.Controls.MetroButton()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnVerTicket = New MetroFramework.Controls.MetroButton()
         CType(Me.MetroStyleManager1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.dgvProductos, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvCarrito, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
+        CType(Me.dgvProductos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblTotal
@@ -66,7 +68,7 @@ Partial Class Form1
         '
         Me.btnSalir.BackgroundImage = CType(resources.GetObject("btnSalir.BackgroundImage"), System.Drawing.Image)
         Me.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnSalir.Location = New System.Drawing.Point(275, 498)
+        Me.btnSalir.Location = New System.Drawing.Point(343, 500)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(39, 35)
         Me.btnSalir.TabIndex = 6
@@ -166,109 +168,62 @@ Partial Class Form1
         Me.MetroLabel3.TabIndex = 10
         Me.MetroLabel3.Text = "Cantidad:"
         '
-        'dgvProductos
+        'dgvCarrito
         '
-        Me.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvProductos.Location = New System.Drawing.Point(11, 154)
-        Me.dgvProductos.Name = "dgvProductos"
-        Me.dgvProductos.Size = New System.Drawing.Size(371, 172)
-        Me.dgvProductos.TabIndex = 12
+        Me.dgvCarrito.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvCarrito.Location = New System.Drawing.Point(11, 154)
+        Me.dgvCarrito.Name = "dgvCarrito"
+        Me.dgvCarrito.Size = New System.Drawing.Size(371, 172)
+        Me.dgvCarrito.TabIndex = 12
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.Panel1.Controls.Add(Me.MetroButton8)
-        Me.Panel1.Controls.Add(Me.DataGridView1)
-        Me.Panel1.Controls.Add(Me.MetroButton6)
-        Me.Panel1.Controls.Add(Me.MetroButton7)
+        Me.Panel1.Controls.Add(Me.btnAgregarProducto)
+        Me.Panel1.Controls.Add(Me.dgvProductos)
+        Me.Panel1.Controls.Add(Me.btnCombos)
+        Me.Panel1.Controls.Add(Me.btnBebidas)
         Me.Panel1.Controls.Add(Me.MetroButton5)
-        Me.Panel1.Controls.Add(Me.MetroButton3)
+        Me.Panel1.Controls.Add(Me.btnPizzas)
         Me.Panel1.Location = New System.Drawing.Point(404, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(425, 552)
         Me.Panel1.TabIndex = 13
         '
-        'Panel2
+        'btnAgregarProducto
         '
-        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Panel2.Controls.Add(Me.MetroLabel6)
-        Me.Panel2.Controls.Add(Me.MetroLabel5)
-        Me.Panel2.Controls.Add(Me.MetroLabel4)
-        Me.Panel2.Location = New System.Drawing.Point(11, 332)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(371, 100)
-        Me.Panel2.TabIndex = 14
+        Me.btnAgregarProducto.Location = New System.Drawing.Point(138, 451)
+        Me.btnAgregarProducto.Name = "btnAgregarProducto"
+        Me.btnAgregarProducto.Size = New System.Drawing.Size(147, 38)
+        Me.btnAgregarProducto.TabIndex = 19
+        Me.btnAgregarProducto.Text = "Agregar producto"
+        Me.btnAgregarProducto.UseSelectable = True
         '
-        'MetroButton1
+        'dgvProductos
         '
-        Me.MetroButton1.Location = New System.Drawing.Point(23, 441)
-        Me.MetroButton1.Name = "MetroButton1"
-        Me.MetroButton1.Size = New System.Drawing.Size(147, 38)
-        Me.MetroButton1.TabIndex = 15
-        Me.MetroButton1.Text = "Eliminar producto"
-        Me.MetroButton1.UseSelectable = True
+        Me.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvProductos.Location = New System.Drawing.Point(19, 163)
+        Me.dgvProductos.Name = "dgvProductos"
+        Me.dgvProductos.Size = New System.Drawing.Size(392, 269)
+        Me.dgvProductos.TabIndex = 4
         '
-        'MetroButton2
+        'btnCombos
         '
-        Me.MetroButton2.Location = New System.Drawing.Point(215, 441)
-        Me.MetroButton2.Name = "MetroButton2"
-        Me.MetroButton2.Size = New System.Drawing.Size(154, 38)
-        Me.MetroButton2.TabIndex = 16
-        Me.MetroButton2.Text = "Aplicar venta"
-        Me.MetroButton2.UseSelectable = True
+        Me.btnCombos.Location = New System.Drawing.Point(226, 100)
+        Me.btnCombos.Name = "btnCombos"
+        Me.btnCombos.Size = New System.Drawing.Size(165, 47)
+        Me.btnCombos.TabIndex = 3
+        Me.btnCombos.Text = "Combos"
+        Me.btnCombos.UseSelectable = True
         '
-        'MetroButton4
+        'btnBebidas
         '
-        Me.MetroButton4.Location = New System.Drawing.Point(23, 499)
-        Me.MetroButton4.Name = "MetroButton4"
-        Me.MetroButton4.Size = New System.Drawing.Size(147, 36)
-        Me.MetroButton4.TabIndex = 18
-        Me.MetroButton4.Text = "Aplicar descuento"
-        Me.MetroButton4.UseSelectable = True
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(164, 509)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(0, 13)
-        Me.Label1.TabIndex = 17
-        '
-        'MetroLabel4
-        '
-        Me.MetroLabel4.AutoSize = True
-        Me.MetroLabel4.Location = New System.Drawing.Point(30, 16)
-        Me.MetroLabel4.Name = "MetroLabel4"
-        Me.MetroLabel4.Size = New System.Drawing.Size(57, 19)
-        Me.MetroLabel4.TabIndex = 0
-        Me.MetroLabel4.Text = "Subtotal"
-        '
-        'MetroLabel5
-        '
-        Me.MetroLabel5.AutoSize = True
-        Me.MetroLabel5.Location = New System.Drawing.Point(136, 16)
-        Me.MetroLabel5.Name = "MetroLabel5"
-        Me.MetroLabel5.Size = New System.Drawing.Size(69, 19)
-        Me.MetroLabel5.TabIndex = 1
-        Me.MetroLabel5.Text = "Descuento"
-        '
-        'MetroLabel6
-        '
-        Me.MetroLabel6.AutoSize = True
-        Me.MetroLabel6.Location = New System.Drawing.Point(253, 16)
-        Me.MetroLabel6.Name = "MetroLabel6"
-        Me.MetroLabel6.Size = New System.Drawing.Size(88, 19)
-        Me.MetroLabel6.TabIndex = 2
-        Me.MetroLabel6.Text = "Neto a pagar"
-        '
-        'MetroButton3
-        '
-        Me.MetroButton3.Location = New System.Drawing.Point(39, 25)
-        Me.MetroButton3.Name = "MetroButton3"
-        Me.MetroButton3.Size = New System.Drawing.Size(168, 47)
-        Me.MetroButton3.TabIndex = 0
-        Me.MetroButton3.Text = "Pizzas"
-        Me.MetroButton3.UseSelectable = True
+        Me.btnBebidas.Location = New System.Drawing.Point(39, 100)
+        Me.btnBebidas.Name = "btnBebidas"
+        Me.btnBebidas.Size = New System.Drawing.Size(168, 47)
+        Me.btnBebidas.TabIndex = 2
+        Me.btnBebidas.Text = "Bebidas"
+        Me.btnBebidas.UseSelectable = True
         '
         'MetroButton5
         '
@@ -279,40 +234,106 @@ Partial Class Form1
         Me.MetroButton5.Text = "Especialidades"
         Me.MetroButton5.UseSelectable = True
         '
-        'MetroButton6
+        'btnPizzas
         '
-        Me.MetroButton6.Location = New System.Drawing.Point(226, 100)
-        Me.MetroButton6.Name = "MetroButton6"
-        Me.MetroButton6.Size = New System.Drawing.Size(165, 47)
-        Me.MetroButton6.TabIndex = 3
-        Me.MetroButton6.Text = "Combos"
-        Me.MetroButton6.UseSelectable = True
+        Me.btnPizzas.Location = New System.Drawing.Point(39, 25)
+        Me.btnPizzas.Name = "btnPizzas"
+        Me.btnPizzas.Size = New System.Drawing.Size(168, 47)
+        Me.btnPizzas.TabIndex = 0
+        Me.btnPizzas.Text = "Pizzas"
+        Me.btnPizzas.UseSelectable = True
         '
-        'MetroButton7
+        'Panel2
         '
-        Me.MetroButton7.Location = New System.Drawing.Point(39, 100)
-        Me.MetroButton7.Name = "MetroButton7"
-        Me.MetroButton7.Size = New System.Drawing.Size(168, 47)
-        Me.MetroButton7.TabIndex = 2
-        Me.MetroButton7.Text = "Bebidas"
-        Me.MetroButton7.UseSelectable = True
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.lblTotalneto)
+        Me.Panel2.Controls.Add(Me.lblSubtotal)
+        Me.Panel2.Controls.Add(Me.MetroLabel6)
+        Me.Panel2.Controls.Add(Me.MetroLabel4)
+        Me.Panel2.Location = New System.Drawing.Point(11, 332)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(371, 100)
+        Me.Panel2.TabIndex = 14
         '
-        'DataGridView1
+        'lblTotalneto
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(19, 163)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(392, 269)
-        Me.DataGridView1.TabIndex = 4
+        Me.lblTotalneto.AutoSize = True
+        Me.lblTotalneto.Location = New System.Drawing.Point(204, 56)
+        Me.lblTotalneto.Name = "lblTotalneto"
+        Me.lblTotalneto.Size = New System.Drawing.Size(83, 19)
+        Me.lblTotalneto.TabIndex = 4
+        Me.lblTotalneto.Text = "MetroLabel7"
         '
-        'MetroButton8
+        'lblSubtotal
         '
-        Me.MetroButton8.Location = New System.Drawing.Point(138, 451)
-        Me.MetroButton8.Name = "MetroButton8"
-        Me.MetroButton8.Size = New System.Drawing.Size(147, 38)
-        Me.MetroButton8.TabIndex = 19
-        Me.MetroButton8.Text = "Agregar producto"
-        Me.MetroButton8.UseSelectable = True
+        Me.lblSubtotal.AutoSize = True
+        Me.lblSubtotal.Location = New System.Drawing.Point(12, 56)
+        Me.lblSubtotal.Name = "lblSubtotal"
+        Me.lblSubtotal.Size = New System.Drawing.Size(81, 19)
+        Me.lblSubtotal.TabIndex = 3
+        Me.lblSubtotal.Text = "MetroLabel1"
+        '
+        'MetroLabel6
+        '
+        Me.MetroLabel6.AutoSize = True
+        Me.MetroLabel6.Location = New System.Drawing.Point(246, 16)
+        Me.MetroLabel6.Name = "MetroLabel6"
+        Me.MetroLabel6.Size = New System.Drawing.Size(88, 19)
+        Me.MetroLabel6.TabIndex = 2
+        Me.MetroLabel6.Text = "Neto a pagar"
+        '
+        'MetroLabel4
+        '
+        Me.MetroLabel4.AutoSize = True
+        Me.MetroLabel4.Location = New System.Drawing.Point(30, 16)
+        Me.MetroLabel4.Name = "MetroLabel4"
+        Me.MetroLabel4.Size = New System.Drawing.Size(57, 19)
+        Me.MetroLabel4.TabIndex = 0
+        Me.MetroLabel4.Text = "Subtotal"
+        '
+        'MetroButton1
+        '
+        Me.MetroButton1.Location = New System.Drawing.Point(23, 441)
+        Me.MetroButton1.Name = "MetroButton1"
+        Me.MetroButton1.Size = New System.Drawing.Size(147, 38)
+        Me.MetroButton1.TabIndex = 15
+        Me.MetroButton1.Text = "Eliminar producto"
+        Me.MetroButton1.UseSelectable = True
+        '
+        'btnConfirmarVenta
+        '
+        Me.btnConfirmarVenta.Location = New System.Drawing.Point(215, 441)
+        Me.btnConfirmarVenta.Name = "btnConfirmarVenta"
+        Me.btnConfirmarVenta.Size = New System.Drawing.Size(154, 38)
+        Me.btnConfirmarVenta.TabIndex = 16
+        Me.btnConfirmarVenta.Text = "Aplicar venta"
+        Me.btnConfirmarVenta.UseSelectable = True
+        '
+        'btnLimpiarCarrito
+        '
+        Me.btnLimpiarCarrito.Location = New System.Drawing.Point(23, 499)
+        Me.btnLimpiarCarrito.Name = "btnLimpiarCarrito"
+        Me.btnLimpiarCarrito.Size = New System.Drawing.Size(147, 36)
+        Me.btnLimpiarCarrito.TabIndex = 18
+        Me.btnLimpiarCarrito.Text = "Limpiar"
+        Me.btnLimpiarCarrito.UseSelectable = True
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(164, 509)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(0, 13)
+        Me.Label1.TabIndex = 17
+        '
+        'btnVerTicket
+        '
+        Me.btnVerTicket.Location = New System.Drawing.Point(199, 499)
+        Me.btnVerTicket.Name = "btnVerTicket"
+        Me.btnVerTicket.Size = New System.Drawing.Size(75, 23)
+        Me.btnVerTicket.TabIndex = 19
+        Me.btnVerTicket.Text = "MetroButton2"
+        Me.btnVerTicket.UseSelectable = True
         '
         'Form1
         '
@@ -320,12 +341,13 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(829, 552)
         Me.ControlBox = False
-        Me.Controls.Add(Me.MetroButton4)
+        Me.Controls.Add(Me.btnVerTicket)
+        Me.Controls.Add(Me.btnLimpiarCarrito)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.MetroButton2)
+        Me.Controls.Add(Me.btnConfirmarVenta)
         Me.Controls.Add(Me.MetroButton1)
         Me.Controls.Add(Me.Panel2)
-        Me.Controls.Add(Me.dgvProductos)
+        Me.Controls.Add(Me.dgvCarrito)
         Me.Controls.Add(Me.MetroTextBox2)
         Me.Controls.Add(Me.MetroLabel3)
         Me.Controls.Add(Me.MetroTextBox1)
@@ -336,11 +358,11 @@ Partial Class Form1
         Me.Controls.Add(Me.Panel1)
         Me.Name = "Form1"
         CType(Me.MetroStyleManager1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.dgvProductos, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvCarrito, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
+        CType(Me.dgvProductos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -353,20 +375,22 @@ Partial Class Form1
     Friend WithEvents MetroTextBox1 As MetroFramework.Controls.MetroTextBox
     Friend WithEvents MetroTextBox2 As MetroFramework.Controls.MetroTextBox
     Friend WithEvents MetroLabel3 As MetroFramework.Controls.MetroLabel
-    Friend WithEvents dgvProductos As DataGridView
+    Friend WithEvents dgvCarrito As DataGridView
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel2 As Panel
     Friend WithEvents MetroButton1 As MetroFramework.Controls.MetroButton
-    Friend WithEvents MetroButton2 As MetroFramework.Controls.MetroButton
+    Friend WithEvents btnConfirmarVenta As MetroFramework.Controls.MetroButton
     Friend WithEvents MetroLabel6 As MetroFramework.Controls.MetroLabel
-    Friend WithEvents MetroLabel5 As MetroFramework.Controls.MetroLabel
     Friend WithEvents MetroLabel4 As MetroFramework.Controls.MetroLabel
-    Friend WithEvents MetroButton4 As MetroFramework.Controls.MetroButton
+    Friend WithEvents btnLimpiarCarrito As MetroFramework.Controls.MetroButton
     Friend WithEvents Label1 As Label
-    Friend WithEvents MetroButton6 As MetroFramework.Controls.MetroButton
-    Friend WithEvents MetroButton7 As MetroFramework.Controls.MetroButton
+    Friend WithEvents btnCombos As MetroFramework.Controls.MetroButton
+    Friend WithEvents btnBebidas As MetroFramework.Controls.MetroButton
     Friend WithEvents MetroButton5 As MetroFramework.Controls.MetroButton
-    Friend WithEvents MetroButton3 As MetroFramework.Controls.MetroButton
-    Friend WithEvents MetroButton8 As MetroFramework.Controls.MetroButton
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents btnPizzas As MetroFramework.Controls.MetroButton
+    Friend WithEvents btnAgregarProducto As MetroFramework.Controls.MetroButton
+    Friend WithEvents dgvProductos As DataGridView
+    Friend WithEvents lblTotalneto As MetroFramework.Controls.MetroLabel
+    Friend WithEvents lblSubtotal As MetroFramework.Controls.MetroLabel
+    Friend WithEvents btnVerTicket As MetroFramework.Controls.MetroButton
 End Class
