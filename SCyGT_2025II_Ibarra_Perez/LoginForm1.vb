@@ -32,37 +32,30 @@ Partial Public Class LoginForm1
 
                 ' Preparamos la consulta SQL para verificar el usuario y la contraseña.
                 ' Utilizamos COUNT(*) para saber si existe una fila con esas credenciales.
-                Dim query As String = "SELECT COUNT(*) FROM Usuarios WHERE Usuario = @Usuario AND Contrasena = @Contrasena"
+                Dim query As String = "SELECT Nombre FROM Usuarios WHERE Usuario = @Usuario AND Contrasena = @Contrasena"
 
                 Using comando As New SqlCommand(query, conexion)
-                    ' Añadimos parámetros para evitar la inyección SQL (¡MUY IMPORTANTE!)
                     comando.Parameters.AddWithValue("@Usuario", usuario)
-                    ' ADVERTENCIA: Esta línea asume que tu columna 'Contrasena' en la BD
-                    ' almacena las contraseñas en texto plano.
-                    ' Si ya has implementado el HASHING de contraseñas en el registro,
-                    ' esta lógica de verificación debe cambiar.
-                    ' Deberías consultar el hash almacenado en la BD y luego comparar
-                    ' con el hash de la contraseña ingresada por el usuario.
                     comando.Parameters.AddWithValue("@Contrasena", contrasena)
 
-                    ' Ejecutamos la consulta. ExecuteScalar() devuelve el primer valor
-                    ' de la primera fila del resultado (en este caso, el COUNT).
-                    Dim resultado As Integer = Convert.ToInt32(comando.ExecuteScalar())
+                    Using lector As SqlDataReader = comando.ExecuteReader()
+                        If lector.Read() Then
+                            ' Guarda los datos en la sesión actual
+                            SesionActual.Usuario = usuario
+                            SesionActual.Nombre = lector("Nombre").ToString()
 
-                    If resultado > 0 Then
-                        ' Si resultado es mayor que 0, significa que se encontró un usuario
-                        ' con esas credenciales.
-                        MessageBox.Show("¡Inicio de sesión exitoso!", "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                        Me.Hide() ' Oculta el formulario de login actual
-                        Form1.Show() ' Muestra el formulario principal (Form1) de tu aplicación
-                    Else
-                        ' Si no se encontró ninguna fila, las credenciales son incorrectas.
-                        MessageBox.Show("Usuario o contraseña incorrectos.", "Error de Inicio de Sesión", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                        txtPass.Clear() ' Limpia la caja de texto de la contraseña
-                        txtUser.Focus() ' Devuelve el foco al campo de usuario para facilitar un nuevo intento
-                    End If
-                End Using ' El comando se libera automáticamente aquí
-            End Using ' La conexión se cierra automáticamente aquí
+                            MessageBox.Show("¡Inicio de sesión exitoso!", "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                            Me.Hide()
+                            Form2.Show()
+                        Else
+                            MessageBox.Show("Usuario o contraseña incorrectos.", "Error de Inicio de Sesión", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                            txtPass.Clear()
+                            txtUser.Focus()
+                        End If
+                    End Using
+                End Using
+
+            End Using ' La conexión se cierra automáticamente aquí ' La conexión se cierra automáticamente aquí
         Catch ex As SqlException
             ' Captura errores específicos de SQL (ej. la base de datos no está disponible)
             MessageBox.Show("Error de base de datos al intentar iniciar sesión: " & ex.Message, "Error de BD", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -89,5 +82,9 @@ Partial Public Class LoginForm1
 
 
         Application.Exit()
+    End Sub
+
+    Private Sub LoginForm1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class

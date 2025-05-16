@@ -207,7 +207,7 @@ Partial Class LoginForm1
         '
         '
         Me.txtUser.CustomButton.Image = Nothing
-        Me.txtUser.CustomButton.Location = New System.Drawing.Point(143, 1)
+        Me.txtUser.CustomButton.Location = New System.Drawing.Point(153, 1)
         Me.txtUser.CustomButton.Name = ""
         Me.txtUser.CustomButton.Size = New System.Drawing.Size(21, 21)
         Me.txtUser.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
@@ -239,7 +239,7 @@ Partial Class LoginForm1
         '
         '
         Me.txtPass.CustomButton.Image = Nothing
-        Me.txtPass.CustomButton.Location = New System.Drawing.Point(143, 1)
+        Me.txtPass.CustomButton.Location = New System.Drawing.Point(153, 1)
         Me.txtPass.CustomButton.Name = ""
         Me.txtPass.CustomButton.Size = New System.Drawing.Size(21, 21)
         Me.txtPass.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
