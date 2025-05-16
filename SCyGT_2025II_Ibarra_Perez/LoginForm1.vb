@@ -72,19 +72,22 @@ Partial Public Class LoginForm1
         End Try
     End Sub
     Private Sub MetroLink1_Click(sender As Object, e As EventArgs) Handles MetroLink1.Click
-        ' Este es un buen lugar para abrir el formulario de registro si MetroLink1 es un enlace "Registrarse"
-        Dim formRegistro As New Form2()
         Me.Hide() ' Oculta el formulario de login actual
-        formRegistro.Show()
+        Dim registroForm As New Form3()
+        registroForm.Show() ' Activa el formulario de registro
     End Sub
-    Private Sub MetroButton1_Click(sender As Object, e As EventArgs) Handles MetroButton1.Click
+    Private Sub MetroButton1_Click(sender As Object, e As EventArgs)
+
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim respuesta As DialogResult = MessageBox.Show("¿Estás seguro de querer salir del programa?",
-                                                     "Confirmar salida",
-                                                     MessageBoxButtons.YesNo,
-                                                     MessageBoxIcon.Question)
+                                                    "Confirmar salida",
+                                                    MessageBoxButtons.YesNo,
+                                                    MessageBoxIcon.Question)
 
 
         Application.Exit()
-
     End Sub
 End Class
