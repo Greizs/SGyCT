@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form1
+Partial Class PuntoVenta
     Inherits MetroFramework.Forms.MetroForm
     'Form reemplaza a Dispose para limpiar la lista de componentes.
     <System.Diagnostics.DebuggerNonUserCode()> _
@@ -22,17 +22,18 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PuntoVenta))
         Me.lblTotal = New System.Windows.Forms.Label()
         Me.btnSalir = New System.Windows.Forms.Button()
         Me.MetroStyleManager1 = New MetroFramework.Components.MetroStyleManager(Me.components)
         Me.lblCajero = New MetroFramework.Controls.MetroLabel()
         Me.MetroLabel2 = New MetroFramework.Controls.MetroLabel()
-        Me.MetroTextBox1 = New MetroFramework.Controls.MetroTextBox()
-        Me.MetroTextBox2 = New MetroFramework.Controls.MetroTextBox()
+        Me.txtNombreProducto = New MetroFramework.Controls.MetroTextBox()
+        Me.txtCantidadProducto = New MetroFramework.Controls.MetroTextBox()
         Me.MetroLabel3 = New MetroFramework.Controls.MetroLabel()
         Me.dgvCarrito = New System.Windows.Forms.DataGridView()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.MetroButton3 = New MetroFramework.Controls.MetroButton()
         Me.btnAgregarProducto = New MetroFramework.Controls.MetroButton()
         Me.dgvProductos = New System.Windows.Forms.DataGridView()
         Me.btnCombos = New MetroFramework.Controls.MetroButton()
@@ -68,7 +69,7 @@ Partial Class Form1
         '
         Me.btnSalir.BackgroundImage = CType(resources.GetObject("btnSalir.BackgroundImage"), System.Drawing.Image)
         Me.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnSalir.Location = New System.Drawing.Point(343, 500)
+        Me.btnSalir.Location = New System.Drawing.Point(359, 500)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(39, 35)
         Me.btnSalir.TabIndex = 6
@@ -95,69 +96,69 @@ Partial Class Form1
         Me.MetroLabel2.TabIndex = 8
         Me.MetroLabel2.Text = "Producto:"
         '
-        'MetroTextBox1
+        'txtNombreProducto
         '
         '
         '
         '
-        Me.MetroTextBox1.CustomButton.Image = Nothing
-        Me.MetroTextBox1.CustomButton.Location = New System.Drawing.Point(160, 1)
-        Me.MetroTextBox1.CustomButton.Name = ""
-        Me.MetroTextBox1.CustomButton.Size = New System.Drawing.Size(21, 21)
-        Me.MetroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
-        Me.MetroTextBox1.CustomButton.TabIndex = 1
-        Me.MetroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.MetroTextBox1.CustomButton.UseSelectable = True
-        Me.MetroTextBox1.CustomButton.Visible = False
-        Me.MetroTextBox1.Lines = New String(-1) {}
-        Me.MetroTextBox1.Location = New System.Drawing.Point(92, 74)
-        Me.MetroTextBox1.MaxLength = 32767
-        Me.MetroTextBox1.Name = "MetroTextBox1"
-        Me.MetroTextBox1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.MetroTextBox1.PromptText = "Ingresa nombre del producto"
-        Me.MetroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None
-        Me.MetroTextBox1.SelectedText = ""
-        Me.MetroTextBox1.SelectionLength = 0
-        Me.MetroTextBox1.SelectionStart = 0
-        Me.MetroTextBox1.ShortcutsEnabled = True
-        Me.MetroTextBox1.Size = New System.Drawing.Size(182, 23)
-        Me.MetroTextBox1.TabIndex = 9
-        Me.MetroTextBox1.UseSelectable = True
-        Me.MetroTextBox1.WaterMark = "Ingresa nombre del producto"
-        Me.MetroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
-        Me.MetroTextBox1.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        Me.txtNombreProducto.CustomButton.Image = Nothing
+        Me.txtNombreProducto.CustomButton.Location = New System.Drawing.Point(160, 1)
+        Me.txtNombreProducto.CustomButton.Name = ""
+        Me.txtNombreProducto.CustomButton.Size = New System.Drawing.Size(21, 21)
+        Me.txtNombreProducto.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.txtNombreProducto.CustomButton.TabIndex = 1
+        Me.txtNombreProducto.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.txtNombreProducto.CustomButton.UseSelectable = True
+        Me.txtNombreProducto.CustomButton.Visible = False
+        Me.txtNombreProducto.Lines = New String(-1) {}
+        Me.txtNombreProducto.Location = New System.Drawing.Point(92, 74)
+        Me.txtNombreProducto.MaxLength = 32767
+        Me.txtNombreProducto.Name = "txtNombreProducto"
+        Me.txtNombreProducto.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtNombreProducto.PromptText = "Ingresa nombre del producto"
+        Me.txtNombreProducto.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.txtNombreProducto.SelectedText = ""
+        Me.txtNombreProducto.SelectionLength = 0
+        Me.txtNombreProducto.SelectionStart = 0
+        Me.txtNombreProducto.ShortcutsEnabled = True
+        Me.txtNombreProducto.Size = New System.Drawing.Size(182, 23)
+        Me.txtNombreProducto.TabIndex = 9
+        Me.txtNombreProducto.UseSelectable = True
+        Me.txtNombreProducto.WaterMark = "Ingresa nombre del producto"
+        Me.txtNombreProducto.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.txtNombreProducto.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
         '
-        'MetroTextBox2
-        '
-        '
+        'txtCantidadProducto
         '
         '
-        Me.MetroTextBox2.CustomButton.Image = Nothing
-        Me.MetroTextBox2.CustomButton.Location = New System.Drawing.Point(160, 1)
-        Me.MetroTextBox2.CustomButton.Name = ""
-        Me.MetroTextBox2.CustomButton.Size = New System.Drawing.Size(21, 21)
-        Me.MetroTextBox2.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
-        Me.MetroTextBox2.CustomButton.TabIndex = 1
-        Me.MetroTextBox2.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.MetroTextBox2.CustomButton.UseSelectable = True
-        Me.MetroTextBox2.CustomButton.Visible = False
-        Me.MetroTextBox2.Lines = New String(-1) {}
-        Me.MetroTextBox2.Location = New System.Drawing.Point(92, 114)
-        Me.MetroTextBox2.MaxLength = 32767
-        Me.MetroTextBox2.Name = "MetroTextBox2"
-        Me.MetroTextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.MetroTextBox2.PromptText = "Ingresa la cantidad"
-        Me.MetroTextBox2.ScrollBars = System.Windows.Forms.ScrollBars.None
-        Me.MetroTextBox2.SelectedText = ""
-        Me.MetroTextBox2.SelectionLength = 0
-        Me.MetroTextBox2.SelectionStart = 0
-        Me.MetroTextBox2.ShortcutsEnabled = True
-        Me.MetroTextBox2.Size = New System.Drawing.Size(182, 23)
-        Me.MetroTextBox2.TabIndex = 11
-        Me.MetroTextBox2.UseSelectable = True
-        Me.MetroTextBox2.WaterMark = "Ingresa la cantidad"
-        Me.MetroTextBox2.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
-        Me.MetroTextBox2.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        '
+        '
+        Me.txtCantidadProducto.CustomButton.Image = Nothing
+        Me.txtCantidadProducto.CustomButton.Location = New System.Drawing.Point(160, 1)
+        Me.txtCantidadProducto.CustomButton.Name = ""
+        Me.txtCantidadProducto.CustomButton.Size = New System.Drawing.Size(21, 21)
+        Me.txtCantidadProducto.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.txtCantidadProducto.CustomButton.TabIndex = 1
+        Me.txtCantidadProducto.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.txtCantidadProducto.CustomButton.UseSelectable = True
+        Me.txtCantidadProducto.CustomButton.Visible = False
+        Me.txtCantidadProducto.Lines = New String(-1) {}
+        Me.txtCantidadProducto.Location = New System.Drawing.Point(92, 114)
+        Me.txtCantidadProducto.MaxLength = 32767
+        Me.txtCantidadProducto.Name = "txtCantidadProducto"
+        Me.txtCantidadProducto.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtCantidadProducto.PromptText = "Ingresa la cantidad"
+        Me.txtCantidadProducto.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.txtCantidadProducto.SelectedText = ""
+        Me.txtCantidadProducto.SelectionLength = 0
+        Me.txtCantidadProducto.SelectionStart = 0
+        Me.txtCantidadProducto.ShortcutsEnabled = True
+        Me.txtCantidadProducto.Size = New System.Drawing.Size(182, 23)
+        Me.txtCantidadProducto.TabIndex = 11
+        Me.txtCantidadProducto.UseSelectable = True
+        Me.txtCantidadProducto.WaterMark = "Ingresa la cantidad"
+        Me.txtCantidadProducto.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.txtCantidadProducto.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
         '
         'MetroLabel3
         '
@@ -179,6 +180,7 @@ Partial Class Form1
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.Panel1.Controls.Add(Me.MetroButton3)
         Me.Panel1.Controls.Add(Me.btnAgregarProducto)
         Me.Panel1.Controls.Add(Me.dgvProductos)
         Me.Panel1.Controls.Add(Me.btnCombos)
@@ -190,9 +192,19 @@ Partial Class Form1
         Me.Panel1.Size = New System.Drawing.Size(425, 552)
         Me.Panel1.TabIndex = 13
         '
+        'MetroButton3
+        '
+        Me.MetroButton3.BackgroundImage = CType(resources.GetObject("MetroButton3.BackgroundImage"), System.Drawing.Image)
+        Me.MetroButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.MetroButton3.Location = New System.Drawing.Point(383, 14)
+        Me.MetroButton3.Name = "MetroButton3"
+        Me.MetroButton3.Size = New System.Drawing.Size(28, 27)
+        Me.MetroButton3.TabIndex = 20
+        Me.MetroButton3.UseSelectable = True
+        '
         'btnAgregarProducto
         '
-        Me.btnAgregarProducto.Location = New System.Drawing.Point(138, 451)
+        Me.btnAgregarProducto.Location = New System.Drawing.Point(138, 509)
         Me.btnAgregarProducto.Name = "btnAgregarProducto"
         Me.btnAgregarProducto.Size = New System.Drawing.Size(147, 38)
         Me.btnAgregarProducto.TabIndex = 19
@@ -202,14 +214,14 @@ Partial Class Form1
         'dgvProductos
         '
         Me.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvProductos.Location = New System.Drawing.Point(19, 163)
+        Me.dgvProductos.Location = New System.Drawing.Point(19, 221)
         Me.dgvProductos.Name = "dgvProductos"
         Me.dgvProductos.Size = New System.Drawing.Size(392, 269)
         Me.dgvProductos.TabIndex = 4
         '
         'btnCombos
         '
-        Me.btnCombos.Location = New System.Drawing.Point(226, 100)
+        Me.btnCombos.Location = New System.Drawing.Point(226, 158)
         Me.btnCombos.Name = "btnCombos"
         Me.btnCombos.Size = New System.Drawing.Size(165, 47)
         Me.btnCombos.TabIndex = 3
@@ -218,7 +230,7 @@ Partial Class Form1
         '
         'btnBebidas
         '
-        Me.btnBebidas.Location = New System.Drawing.Point(39, 100)
+        Me.btnBebidas.Location = New System.Drawing.Point(39, 158)
         Me.btnBebidas.Name = "btnBebidas"
         Me.btnBebidas.Size = New System.Drawing.Size(168, 47)
         Me.btnBebidas.TabIndex = 2
@@ -227,7 +239,7 @@ Partial Class Form1
         '
         'MetroButton5
         '
-        Me.MetroButton5.Location = New System.Drawing.Point(226, 25)
+        Me.MetroButton5.Location = New System.Drawing.Point(226, 83)
         Me.MetroButton5.Name = "MetroButton5"
         Me.MetroButton5.Size = New System.Drawing.Size(165, 47)
         Me.MetroButton5.TabIndex = 1
@@ -236,7 +248,7 @@ Partial Class Form1
         '
         'btnPizzas
         '
-        Me.btnPizzas.Location = New System.Drawing.Point(39, 25)
+        Me.btnPizzas.Location = New System.Drawing.Point(39, 83)
         Me.btnPizzas.Name = "btnPizzas"
         Me.btnPizzas.Size = New System.Drawing.Size(168, 47)
         Me.btnPizzas.TabIndex = 0
@@ -276,6 +288,7 @@ Partial Class Form1
         'MetroLabel6
         '
         Me.MetroLabel6.AutoSize = True
+        Me.MetroLabel6.BackColor = System.Drawing.Color.Transparent
         Me.MetroLabel6.Location = New System.Drawing.Point(246, 16)
         Me.MetroLabel6.Name = "MetroLabel6"
         Me.MetroLabel6.Size = New System.Drawing.Size(88, 19)
@@ -302,7 +315,7 @@ Partial Class Form1
         '
         'btnConfirmarVenta
         '
-        Me.btnConfirmarVenta.Location = New System.Drawing.Point(215, 441)
+        Me.btnConfirmarVenta.Location = New System.Drawing.Point(191, 441)
         Me.btnConfirmarVenta.Name = "btnConfirmarVenta"
         Me.btnConfirmarVenta.Size = New System.Drawing.Size(154, 38)
         Me.btnConfirmarVenta.TabIndex = 16
@@ -328,14 +341,14 @@ Partial Class Form1
         '
         'btnVerTicket
         '
-        Me.btnVerTicket.Location = New System.Drawing.Point(199, 499)
+        Me.btnVerTicket.Location = New System.Drawing.Point(191, 499)
         Me.btnVerTicket.Name = "btnVerTicket"
-        Me.btnVerTicket.Size = New System.Drawing.Size(75, 23)
+        Me.btnVerTicket.Size = New System.Drawing.Size(154, 36)
         Me.btnVerTicket.TabIndex = 19
-        Me.btnVerTicket.Text = "MetroButton2"
+        Me.btnVerTicket.Text = "Consultar Ticket"
         Me.btnVerTicket.UseSelectable = True
         '
-        'Form1
+        'PuntoVenta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -348,15 +361,15 @@ Partial Class Form1
         Me.Controls.Add(Me.MetroButton1)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.dgvCarrito)
-        Me.Controls.Add(Me.MetroTextBox2)
+        Me.Controls.Add(Me.btnSalir)
+        Me.Controls.Add(Me.txtCantidadProducto)
         Me.Controls.Add(Me.MetroLabel3)
-        Me.Controls.Add(Me.MetroTextBox1)
+        Me.Controls.Add(Me.txtNombreProducto)
         Me.Controls.Add(Me.MetroLabel2)
         Me.Controls.Add(Me.lblCajero)
-        Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.lblTotal)
         Me.Controls.Add(Me.Panel1)
-        Me.Name = "Form1"
+        Me.Name = "PuntoVenta"
         CType(Me.MetroStyleManager1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvCarrito, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
@@ -372,8 +385,8 @@ Partial Class Form1
     Friend WithEvents MetroStyleManager1 As MetroFramework.Components.MetroStyleManager
     Friend WithEvents lblCajero As MetroFramework.Controls.MetroLabel
     Friend WithEvents MetroLabel2 As MetroFramework.Controls.MetroLabel
-    Friend WithEvents MetroTextBox1 As MetroFramework.Controls.MetroTextBox
-    Friend WithEvents MetroTextBox2 As MetroFramework.Controls.MetroTextBox
+    Friend WithEvents txtNombreProducto As MetroFramework.Controls.MetroTextBox
+    Friend WithEvents txtCantidadProducto As MetroFramework.Controls.MetroTextBox
     Friend WithEvents MetroLabel3 As MetroFramework.Controls.MetroLabel
     Friend WithEvents dgvCarrito As DataGridView
     Friend WithEvents Panel1 As Panel
@@ -393,4 +406,5 @@ Partial Class Form1
     Friend WithEvents lblTotalneto As MetroFramework.Controls.MetroLabel
     Friend WithEvents lblSubtotal As MetroFramework.Controls.MetroLabel
     Friend WithEvents btnVerTicket As MetroFramework.Controls.MetroButton
+    Friend WithEvents MetroButton3 As MetroFramework.Controls.MetroButton
 End Class

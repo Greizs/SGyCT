@@ -55,4 +55,25 @@ Public Class FormVerTicket
             conexion.Close()
         End Try
     End Sub
+
+    Private Sub MetroButton1_Click(sender As Object, e As EventArgs) Handles MetroButton1.Click
+        Dim respuesta As DialogResult = MessageBox.Show("¿Estás seguro de querer salir del programa?",
+                                                        "Confirmar salida",
+                                                        MessageBoxButtons.YesNo,
+                                                        MessageBoxIcon.Question)
+
+        If respuesta = DialogResult.Yes Then
+            Application.Exit()
+        End If
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.Hide()
+        Dim pdv As New PuntoVenta()
+        pdv.Show()
+    End Sub
+
+    Private Sub FormVerTicket_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

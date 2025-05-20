@@ -118,10 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="MetroButton1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="MetroButton2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAACxwSURBVHhe7Z15
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAACxwSURBVHhe7Z15
         tGVVda9/UFBFSd/3SisoNqgoBBuaBwQkhGdANESHKIk87IiiD40viKCCKI3yxER4kKBEUIKgqIggPBpp
         FOmlCyB90RVQFn3z3ljJcVjOM6vq3nvOPGfNtb9vjO+ffW/de+Zas+7+nbP3Xktqj0UkrSdpZ0kflXSE
         pO9JukDSdZLukzRb0lxJ/w8RETttOReUc0I5N5RzRDlXlHPGVyV9pHcuWbd3boHKWEPSOyUdLekSSXOc

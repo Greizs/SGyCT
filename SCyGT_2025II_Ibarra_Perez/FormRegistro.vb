@@ -2,31 +2,13 @@
 Imports System.Data.SqlClient
 Imports System.Net.Mail
 
-Public Class Form3
-    Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
-
-    Private Sub txtNombre_Click(sender As Object, e As EventArgs) Handles txtNombre.Click
-
-    End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim respuesta As DialogResult = MessageBox.Show("¿Estás seguro de querer salir del programa?",
-                                                   "Confirmar salida",
-                                                   MessageBoxButtons.YesNo,
-                                                   MessageBoxIcon.Question)
-
-
-        Application.Exit()
-    End Sub
-
+Public Class FormRegistro
     Private Sub btnRegistrar_Click(sender As Object, e As EventArgs) Handles btnRegistrar.Click
-        Dim nombre As String = txtNombre.Text.Trim()
-        Dim email As String = txtEmail.Text.Trim()
-        Dim usuario As String = txtUsuario.Text.Trim()
-        Dim contrasena As String = txtContrasena.Text
         Dim confirmarContrasena As String = txtConfirmarContrasena.Text
+        Dim contrasena As String = txtContrasena.Text
+        Dim email As String = txtEmail.Text.Trim()
+        Dim nombre As String = txtNombre.Text.Trim()
+        Dim usuario As String = txtUsuario.Text.Trim()
 
         If String.IsNullOrEmpty(nombre) OrElse String.IsNullOrEmpty(email) OrElse
            String.IsNullOrEmpty(usuario) OrElse String.IsNullOrEmpty(contrasena) OrElse
@@ -51,15 +33,16 @@ Public Class Form3
                 conexion.Open()
                 Dim query As String = "INSERT INTO Usuarios (Nombre, Email, Usuario, Contrasena) VALUES (@Nombre, @Email, @Usuario, @Contrasena)"
                 Using comando As New SqlCommand(query, conexion)
-                    comando.Parameters.AddWithValue("@Nombre", nombre)
-                    comando.Parameters.AddWithValue("@Email", email)
-                    comando.Parameters.AddWithValue("@Usuario", usuario)
                     comando.Parameters.AddWithValue("@Contrasena", contrasena)
+                    comando.Parameters.AddWithValue("@Email", email)
+                    comando.Parameters.AddWithValue("@Nombre", nombre)
+                    comando.Parameters.AddWithValue("@Usuario", usuario)
                     comando.ExecuteNonQuery()
                     MessageBox.Show("Usuario registrado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     LimpiarCampos()
                     Me.Hide()
-                    Form1.Show() ' Muestra el formulario principal (Form1) de tu aplicación
+                    Dim menu As New Menu
+                    menu.Show()
                 End Using
             End Using
         Catch ex As SqlException
@@ -71,6 +54,18 @@ Public Class Form3
         Catch ex As Exception
             MessageBox.Show("Error inesperado: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim respuesta As DialogResult = MessageBox.Show("¿Estás seguro de querer salir del programa?",
+                                                        "Confirmar salida",
+                                                        MessageBoxButtons.YesNo,
+                                                        MessageBoxIcon.Question)
+
+        If respuesta = DialogResult.Yes Then
+            ' Si el usuario confirma, cierra la aplicación
+            Application.Exit()
+        End If
     End Sub
 
     Private Function IsValidEmail(email As String) As Boolean
@@ -93,6 +88,10 @@ Public Class Form3
     Private Sub MetroLink1_Click(sender As Object, e As EventArgs) Handles MetroLink1.Click
         Me.Hide()
         Dim loginform As New LoginForm1
-        LoginForm1.Show()
+        loginform.Show()
+    End Sub
+
+    Private Sub FormRegistro_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class

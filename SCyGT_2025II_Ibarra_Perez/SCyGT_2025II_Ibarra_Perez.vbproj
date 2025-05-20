@@ -86,23 +86,29 @@
     <Compile Include="..\..\..\ConexionBD.vb">
       <Link>ConexionBD.vb</Link>
     </Compile>
-    <Compile Include="Form1.vb">
+    <Compile Include="PuntoVenta.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="PuntoVenta.Designer.vb">
+      <DependentUpon>PuntoVenta.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.vb">
-      <DependentUpon>Form2.vb</DependentUpon>
+    <Compile Include="Menu.Designer.vb">
+      <DependentUpon>Menu.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form2.vb">
+    <Compile Include="Menu.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form3.Designer.vb">
-      <DependentUpon>Form3.vb</DependentUpon>
+    <Compile Include="FormRegistro.Designer.vb">
+      <DependentUpon>FormRegistro.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form3.vb">
+    <Compile Include="FormRegistro.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInventario.Designer.vb">
+      <DependentUpon>FormInventario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormInventario.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormVerTicket.Designer.vb">
@@ -136,16 +142,25 @@
     <Compile Include="SplashScreen1.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Usuarios.Designer.vb">
+      <DependentUpon>Usuarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="PuntoVenta.resx">
+      <DependentUpon>PuntoVenta.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.vb</DependentUpon>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form3.resx">
-      <DependentUpon>Form3.vb</DependentUpon>
+    <EmbeddedResource Include="FormRegistro.resx">
+      <DependentUpon>FormRegistro.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInventario.resx">
+      <DependentUpon>FormInventario.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormVerTicket.resx">
       <DependentUpon>FormVerTicket.vb</DependentUpon>
@@ -161,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SplashScreen1.resx">
       <DependentUpon>SplashScreen1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios.resx">
+      <DependentUpon>Usuarios.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
